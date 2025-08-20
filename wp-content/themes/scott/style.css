@@ -1,0 +1,660 @@
+/*!
+Theme Name: scott
+Theme URI: https://themesvila.com/themes-wp/scott/
+Author: themes_oceans
+Author URI: https://www.templatemonster.com/authors/themes_oceans/
+Description: Marketing & Software WordPress Theme
+Version: 1.4
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: scott
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+scott is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+img{
+	height: auto;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+dl {
+  margin: 0 20px;
+}
+dd {
+	margin-bottom: 12px;
+}
+table {
+	border-bottom: 1px solid #ededed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin: 0 0 20px;
+	width: 100%;
+	text-align: center;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: center;
+}
+caption {
+	font-size: 16px;
+	margin: 0;
+	padding-top: 0;
+}
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    border-top: 1px solid #ededed;
+    padding: 6px 10px 6px 0;
+}
+tr{
+	 padding: 6px 10px 6px 0;
+}
+del {
+    color: #333;
+}
+select{
+	border: 1px solid #ddd;
+	padding: 13px;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+.widget ul{
+	padding-left: 0;
+	list-style-type: none;
+	margin-bottom: 0;
+}
+.widget li li{
+	padding-left: 15px;
+}
+.widget .widget-title a{
+	color: #132150;
+}
+.widget li,
+.widget li a,
+.widget select
+{
+	color: #717584;
+}
+.widget ul li:first-child{
+	margin-top: 0px;
+}
+.widget ul li{
+	margin-top: 10px;
+	padding-top: 0;
+}
+.widget li a:hover,
+.widget li a:focus{
+	color: #31e1a1;
+}
+.widget.widget_categories li li:after{
+	content: '';
+}
+.widget.widget_nav_menu li a{
+	display: block;
+}
+.widget.widget_nav_menu li li a{
+	padding-top: 5px;
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.content-area a,
+.entry-content a{
+	color: #346bf0;
+}
+.entry-content input[type="text"],
+.entry-content input[type="email"],
+.entry-content input[type="url"],
+.entry-content input[type="password"]{
+	background-color: #f8f8f8;
+	border: 1px solid #f8f8f8;
+	padding: 0 15px;
+}
+.entry-content input[type="submit"],
+.entry-content button{
+	color: #fff !important;
+	border: 1px solid #0d9cea;
+	background: #0d9cea;
+	padding: 8px 15px;
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*Menu Css*/
+.rt-site-header,
+.rt-site-header .container
+{
+	align-items: center;
+}
+
+#header_right{
+	display: flex;
+	flex-basis: auto;
+}
+.site_logo,
+#navigation{
+	margin-top: 10px;
+}
+#navigation ul{
+	list-style-type: none;
+}
+#navigation li:last-child >  a{
+	margin-right: 0;
+}
+/*-------------------------------
+# dropdwon menu 
+--------------------------------*/
+
+#navigation .sub-menu,
+#navigation .children {
+    background-clip: padding-box;
+    background-color: #fff;
+    border-top: 0px solid #fff;
+    height: auto;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;	
+    z-index: 100;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    z-index: 99;
+    min-width: 200px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 10px 10px 0 rgba(145, 145, 145, .1);
+	box-shadow: 0 10px 10px 0 rgba(145, 145, 145, .1);
+
+}
+
+#navigation .sub-menu li a,
+#navigation .children li a{
+    display: block;
+	position: relative;	
+	color: #313131;
+	font-size: 14px;
+}
+#navigation .menu-item-has-children > a{
+	position: relative;
+}
+#navigation .menu-item-has-children > a:after,
+#navigation .page_item_has_children > a:after
+ {
+    font-family: 'icofont';
+    content: '\ea99';
+    display: inline-block;
+    -webkit-transition: .25s ease;
+    transition: .25s ease;
+    margin-left: 8px;
+	position: absolute;
+	top: 2px;
+	right: -20px;
+
+}
+#navigation .menu-item-has-children .menu-item-has-children > a:after,
+#navigation .page_item_has_children .page_item_has_children > a:after
+ {
+    font-family: 'icofont';
+    content: " ";
+	right: 8px;
+	top: 5px;
+
+}
+#navigation .menu-item-has-children:hover>a:after,
+#navigation .page_item_has_children:hover>a:after
+ {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: #fff;
+}
+
+#navigation .menu-item-has-children .menu-item-has-children:hover>a:after,
+#navigation .page_item_has_children .page_item_has_children:hover>a:after
+ {
+    -webkit-transform: rotate(90deg);
+     transform: rotate(90deg);
+    color: #fff;
+}
+#navigation ul.sub-menu li,
+#navigation .children li{
+	position: relative;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;	
+	line-height: 2;
+}
+
+#navigation ul.sub-menu li:hover:after,
+#navigation .children li:hover:after{
+    visibility: visible;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+}
+
+#navigation .menu-item-has-children:hover>.sub-menu, 
+#navigation .page_item_has_children:hover>.children{
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    top: 40px;
+    border-radius: 5px;
+}
+#navigation .sub-menu a,
+.children a{
+	
+}
+
+#navigation .sub-menu li:hover>a ,
+#navigation .children li:hover>a 
+{
+    color: #fff!important;
+    background: #0d9cea;
+}
+
+#navigation ul.sub-menu li, 
+#navigation .children li {
+    display:  block;
+	margin-left: 0;
+}
+
+#navigation ul.sub-menu li a, 
+#navigation .children li a {
+    padding: 10px 20px;
+    letter-spacing: 0px;
+	margin: 0;
+	font-weight: 600;
+	transition: .5s;
+}
+
+#navigation .sub-menu ,
+#navigation .children {
+    left: auto;
+}
+
+#navigation .sub-menu .sub-menu,
+#navigation .children .children{
+    top: 0;
+    right: 100%;
+    left: auto;
+}
+#navigation .menu-item-has-children .menu-item-has-children:hover>.sub-menu, 
+#navigation .page_item_has_children .page_item_has_children:hover>.children {
+    top: 0;
+}
+ 
+#navigation .page_item_has_children:hover>.children {
+    top: 60px;
+}
+#mobile_menu{
+	display: none!important;
+	width: 100%;
+}
+.navbar-expand-lg .row{
+	width: 100%;
+}
+.slicknav_nav{
+	background: #31348c;
+	padding: 20px;
+}
+.slicknav_nav li a{
+	font-weight: 500;
+	padding: 0;
+}
+.slicknav_nav li a:hover,
+.slicknav_nav li a:focus{
+	color: #fff;
+}
+.slicknav_nav ul ul{
+	padding-left: 25px;
+}
+
+.slicknav_menu{
+	background-color: transparent;
+}
+.slicknav_btn {
+	font-size: 24px;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.slicknav_btn,
+.slicknav_btn:hover,
+.slicknav_btn:focus{
+	color: #fff;
+}
+.customize-support .rt-site-header,
+.customize-support .rt-site-header.rt-sticky-active{
+	padding-top: 45px;
+}
+@media (max-width: 992px){
+	.site_logo, #navigation {
+		margin-top: 4px;
+	}
+	#navigation,
+	#header_right .rt-menu-tolls	{
+		display: none!important;
+	}
+	#mobile_menu{
+		display: block!important;
+	}
+	
+
+	.navbar-nav {
+		background: #31348c;
+		padding: 15px;
+	}
+
+}
+.slicknav_nav .slicknav_row {
+	padding: 0;
+}
+.footer-bottom .copyright a:hover,
+.footer-bottom .copyright a:focus{
+	color: #31e1a1;
+}
+@media (max-width: 767px){
+	.rt-site-header.rt-sticky-active.bsnav {
+		padding: 20px 0 10px;
+	}
+	.slicknav_btn {
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		position: relative;
+		top: -25px;
+	}
+}
+.rt-site-footer h5{
+	font-size: 17px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.rt-site-footer ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+.rt-site-footer li{
+	padding-bottom: 7px;
+}
+.rt-site-footer li a:hover{
+	text-decoration: underline;
+}
